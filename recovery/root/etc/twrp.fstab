@@ -1,7 +1,7 @@
 # mount point	fstype		device			[device2]
 
-/modem_st1		emmc		/dev/block/bootdevice/by-name/modemst1		flags=backup=1;display=EFS
-/modem_st2		emmc		/dev/block/bootdevice/by-name/modemst2		flags=backup=1;subpartitionof=/modem_st1
+/efs1			emmc		/dev/block/bootdevice/by-name/modemst1		flags=backup=1;display="EFS"
+/efs2			emmc		/dev/block/bootdevice/by-name/modemst2		flags=backup=1;subpartitionof=/efs2
 /boot			emmc		/dev/block/bootdevice/by-name/boot
 /system			ext4		/dev/block/bootdevice/by-name/system
 /system_image	emmc		/dev/block/bootdevice/by-name/system
