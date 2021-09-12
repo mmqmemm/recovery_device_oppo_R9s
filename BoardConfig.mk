@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/xiaomi/rolex
+LOCAL_PATH := device/oppo/A57
 
 # Architecture
 TARGET_ARCH := arm64
@@ -31,7 +31,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8937
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno506
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno505
 TARGET_BOARD_SUFFIX := _64
 
 # Bootloader
@@ -39,12 +39,14 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8937
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
-BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78B0000 androidboot.selinux=permissive
-BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_TAGS_OFFSET := 0x00000100
-BOARD_RAMDISK_OFFSET := 0x01000000
+BOARD_KERNEL_BASE := 0x10000000
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlyprintk androidboot.selinux=enforcing ramoops.mem_address=0x9ff00000 ramoops.mem_size=0x100000 ramoops.record_size=0x20000 ramoops.dump_oops=0
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_OFFSET := 0x80008000
+BOARD_KERNEL_TAGS_OFFSET := 0x80000100
+BOARD_RAMDISK_OFFSET := 0x81000000
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/recovery/kernel
+BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
@@ -66,7 +68,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_INCLUDE_CRYPTO := true
-TW_MAX_BRIGHTNESS := 255
+TW_DEFAULT_BRIGHTNESS := 963
+TW_MAX_BRIGHTNESS := 2047
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_SCREEN_BLANK_ON_BOOT := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
