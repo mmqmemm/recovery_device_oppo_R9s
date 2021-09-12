@@ -17,9 +17,27 @@
 # Specify phone tech before including full_phone
 $(call inherit-product, vendor/omni/config/gsm.mk)
 
-$(call inherit-product, device/oppo/A57/full_A57.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/common.mk)
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
+
+# Encryption
+PRODUCT_PACKAGES += \
+    libcryptfs_hw
+
+# Kernel
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/kernel:kernel
+
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := A57
 PRODUCT_NAME := omni_A57
+PRODUCT_BRAND := OPPO
+PRODUCT_MODEL := OPPO A57
+PRODUCT_MANUFACTURER := OPPO
