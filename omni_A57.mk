@@ -31,10 +31,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcryptfs_hw
 
-# Kernel
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/kernel:kernel
-
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := A57
 PRODUCT_NAME := omni_A57
