@@ -1,7 +1,7 @@
 on fs
     write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 18D1
-    write /sys/class/android_usb/android0/idProduct D001
+    write /sys/class/android_usb/android0/idVendor 22D9
+    write /sys/class/android_usb/android0/idProduct 2769
     write /sys/class/android_usb/android0/f_ffs/aliases adb
     write /sys/class/android_usb/android0/functions adb
     write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
@@ -14,17 +14,23 @@ on property:sys.usb.config=none
 
 on property:sys.usb.config=mass_storage,adb
     write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idVendor 22D9
+    write /sys/class/android_usb/android0/idProduct 2767
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/class/android_usb/android0/enable 1
 
 on property:sys.usb.config=mtp,adb
     write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idVendor 22D9
+    write /sys/class/android_usb/android0/idProduct 2765
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/class/android_usb/android0/enable 1
     start adbd
 
 on property:sys.usb.config=adb
     write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idVendor 22D9
+    write /sys/class/android_usb/android0/idProduct 2769
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/class/android_usb/android0/enable ${service.adb.root}
     start adbd
