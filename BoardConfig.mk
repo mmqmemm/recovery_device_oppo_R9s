@@ -49,7 +49,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/oppo/A57
+TARGET_KERNEL_SOURCE := kernel/oppo/msm8937
 TARGET_KERNEL_CONFIG := msm8937-perf_defconfig
 
 # Encryption
