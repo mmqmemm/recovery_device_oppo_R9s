@@ -18,8 +18,6 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE), A57)
 
-QCOM_BOARD_PLATFORMS += msm8937
-
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 endif
