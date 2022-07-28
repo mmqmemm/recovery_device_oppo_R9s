@@ -127,6 +127,9 @@ TW_INCLUDE_RESETPROP := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
+# TWRP removals
+TW_EXCLUDE_APEX := true
+
 # Disable Mouse Cursor
 TW_INPUT_BLACKLIST := "hbtp_vm"
 
