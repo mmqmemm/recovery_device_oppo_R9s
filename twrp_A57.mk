@@ -22,13 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 # Inherit from TWRP common configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-# Charger
-PRODUCT_PACKAGES += \
-    charger_res_images
-
-# Encryption
-PRODUCT_PACKAGES += \
-    libcryptfs_hw
+# Crypto
+PRODUCT_PACKAGES += qcom_decrypt_fbe
+PRODUCT_PACKAGES += qcom_decrypt
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := A57
