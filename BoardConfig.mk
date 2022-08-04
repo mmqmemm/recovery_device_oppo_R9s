@@ -129,6 +129,7 @@ TARGET_USES_LOGD := true
 
 # TWRP removals
 TW_EXCLUDE_APEX := true
+TW_EXCLUDE_PYTHON := true
 
 # Disable Mouse Cursor
 TW_INPUT_BLACKLIST := "hbtp_vm"
