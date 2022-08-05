@@ -9,3 +9,6 @@ on init
     write /sys/class/power_supply/usb/otg_switch 1
 
     setprop ro.board.platform msm8937
+
+on boot
+    start health-hal-2-1
