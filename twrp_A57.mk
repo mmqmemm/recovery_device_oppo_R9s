@@ -29,6 +29,15 @@ PRODUCT_RELEASE_NAME := A57
 PRODUCT_PACKAGES += qcom_decrypt_fbe
 PRODUCT_PACKAGES += qcom_decrypt
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd \
+    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.0-impl-mock.recovery
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.fastbootd.available=true
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
