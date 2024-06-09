@@ -55,7 +55,7 @@ BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oppo/msm8937
-TARGET_KERNEL_CONFIG := lineageos_A57_defconfig
+TARGET_KERNEL_CONFIG := lineageos_A57_recovery_defconfig
 
 # TWRP - Crypto
 TW_INCLUDE_CRYPTO := true
