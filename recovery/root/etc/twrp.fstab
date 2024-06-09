@@ -6,6 +6,7 @@
 /system			ext4		/dev/block/bootdevice/by-name/system
 /system_image	emmc		/dev/block/bootdevice/by-name/system
 /data			ext4		/dev/block/bootdevice/by-name/userdata		flags=encryptable=footer
+/metadata       ext4        /dev/block/bootdevice/by-name/reserve4      flags=display="Metadata";fsflags="discard"
 /cache			ext4		/dev/block/bootdevice/by-name/cache
 /misc			emmc		/dev/block/bootdevice/by-name/misc
 /recovery		emmc		/dev/block/bootdevice/by-name/recovery		flags=backup=1
