@@ -22,12 +22,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 # Inherit from TWRP common configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
 
+# Product release name
+PRODUCT_RELEASE_NAME := A57
+
 # Crypto
 PRODUCT_PACKAGES += qcom_decrypt_fbe
 PRODUCT_PACKAGES += qcom_decrypt
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := A57
+PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
 PRODUCT_NAME := twrp_A57
 PRODUCT_BRAND := OPPO
 PRODUCT_MODEL := OPPO A57
