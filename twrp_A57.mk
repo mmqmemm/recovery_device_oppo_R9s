@@ -15,13 +15,12 @@
 #
 
 # Inherit from those products. Most specific first.
-$(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, vendor/omni/config/gsm.mk)
+# Inherit from TWRP common configuration
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -33,7 +32,7 @@ PRODUCT_PACKAGES += \
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := A57
-PRODUCT_NAME := omni_A57
+PRODUCT_NAME := twrp_A57
 PRODUCT_BRAND := OPPO
 PRODUCT_MODEL := OPPO A57
 PRODUCT_MANUFACTURER := OPPO

@@ -15,4 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_A57.mk
+    $(LOCAL_DIR)/twrp_A57.mk
+
+COMMON_LUNCH_CHOICES := \
+    twrp_A57-user \
+    twrp_A57-userdebug \
+    twrp_A57-eng
