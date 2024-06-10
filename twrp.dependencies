@@ -1,8 +1,7 @@
 [
   {
-    "remote": "omnirom",
-    "repository": "android_vendor_qcom_opensource_commonsys",
-    "target_path": "vendor/qcom/opensource/commonsys",
-    "revision": "android-9.0"
+    "repository": "android_kernel_oppo_msm8937",
+    "target_path": "kernel/oppo/msm8937",
+    "revision": "lineage-18.1"
   }
 ]
