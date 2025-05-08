@@ -35,7 +35,7 @@
 
 # Data
 /data			ext4		/dev/block/bootdevice/by-name/userdata		flags=encryptable=footer
-/metadata       ext4        /dev/block/bootdevice/by-name/reserve4      flags=display="Metadata";fsflags="discard"
+/metadata       ext4        /dev/block/bootdevice/by-name/reserve2      flags=display="Metadata";fsflags="discard"
 /misc			emmc		/dev/block/bootdevice/by-name/misc
 
 # Removable media
