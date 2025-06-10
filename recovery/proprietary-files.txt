@@ -16,10 +16,10 @@ vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
 
 # Gatekeeper
-vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8937.so
+vendor/lib64/hw/gatekeeper.msm8953.so
 
 # Keystore
-vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8937.so
+vendor/lib64/hw/keystore.msm8953.so
 
 # QMI
 vendor/lib64/libdiag.so
