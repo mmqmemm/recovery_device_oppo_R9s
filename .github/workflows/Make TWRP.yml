@@ -23,18 +23,6 @@ on:
         description: 'DEVICE_PATH'
         required: true
         default: 'device/oppo/R9s'
-      KERNEL_SOURCE_URL:
-        description: 'KERNEL_SOURCE_URL (if no common tree, leave blank)'
-        required: false
-        default: 'https://codeberg.org/TipzTeam/android_kernel_oppo_msm8937'
-      KERNEL_SOURCE_BRANCH:
-        description: 'KERNEL_SOURCE_BRANCH'
-        required: false
-        default: 'lineage-21-msm8953'
-      KERNEL_SOURCE_PATH:
-        description: 'KERNEL_SOURCE_PATH (if no common tree, leave blank)'
-        required: false
-        default: 'kernel/oppo/msm8953'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
@@ -123,11 +111,8 @@ jobs:
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Clone kernel source
-      if: |
-        github.event.inputs.KERNEL_SOURCE_URL != null
-        && github.event.inputs.KERNEL_SOURCE_PATH != null
       run: |
-        git clone ${{ github.event.inputs.KERNEL_SOURCE_URL }} -b ${{ github.event.inputs.KERNEL_SOURCE_BRANCH }} ./${{ github.event.inputs.KERNEL_SOURCE_PATH }} --depth=1
+        git clone https://codeberg.org/TipzTeam/android_kernel_oppo_msm8937 -b lineage-21-msm8953 kernel/oppo/msm8953 --depth=1
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Check Build Tree
