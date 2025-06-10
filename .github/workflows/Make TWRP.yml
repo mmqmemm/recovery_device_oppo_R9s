@@ -30,7 +30,7 @@ on:
         description: 'KERNEL_SOURCE_BRANCH'
         required: true
         default: 'lineage-21-msm8953'
-      KERNEL_SOURCE_PATH:"https://codeberg.org/TipzTeam/android_kernel_oppo_msm8937"
+      KERNEL_SOURCE_PATH:'https://codeberg.org/TipzTeam/android_kernel_oppo_msm8937'
         description: 'KERNEL_SOURCE_PATH (if no common tree, leave blank)'
         required: false
         default: 'kernel/oppo/msm8953'
