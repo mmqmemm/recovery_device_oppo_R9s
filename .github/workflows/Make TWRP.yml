@@ -127,7 +127,7 @@ jobs:
         github.event.inputs.KERNEL_SOURCE_URL != null
         && github.event.inputs.KERNEL_SOURCE_PATH != null
       run: |
-      git clone ${{ github.event.inputs.KERNEL_SOURCE_URL }} -b ${{ github.event.inputs.KERNEL_SOURCE_BRANCH }} ./${{ github.event.inputs.KERNEL_SOURCE_PATH }}
+        git clone ${{ github.event.inputs.KERNEL_SOURCE_URL }} -b ${{ github.event.inputs.KERNEL_SOURCE_BRANCH }} ./${{ github.event.inputs.KERNEL_SOURCE_PATH }} --depth=1
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Check Build Tree
